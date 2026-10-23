@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E Predict - Deployment Readiness</title>
+    <meta name="description" content="Check your project before release and get clear, practical steps to fix deployment issues." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#F5F3FF] text-[#302B43] antialiased min-h-screen">
+    <div id="root"></div>
+    <script>
+      window.addEventListener('error', function(e) {
+        var errEl = document.getElementById('debug-error-banner');
+        if (!errEl) {
+          errEl = document.createElement('div');
+          errEl.id = 'debug-error-banner';
+          errEl.style = 'position:fixed;top:0;left:0;right:0;padding:24px;background:#fee2e2;color:#991b1b;z-index:999999;font-family:monospace;font-size:14px;border-bottom:2px solid #ef4444;white-space:pre-wrap;';
+          document.body.appendChild(errEl);
+        }
+        errEl.innerText = 'Runtime Error: ' + (e.message || e.error) + '\n' + (e.filename ? e.filename + ':' + e.lineno : '');
+      });
+      window.addEventListener('unhandledrejection', function(e) {
+        var errEl = document.getElementById('debug-promise-banner');
+        if (!errEl) {
+          errEl = document.createElement('div');
+          errEl.id = 'debug-promise-banner';
+          errEl.style = 'position:fixed;bottom:0;left:0;right:0;padding:20px;background:#fef3c7;color:#92400e;z-index:999999;font-family:monospace;font-size:13px;border-top:2px solid #f59e0b;white-space:pre-wrap;';
+          document.body.appendChild(errEl);
+        }
+        errEl.innerText = 'Unhandled Promise Rejection: ' + (e.reason?.stack || e.reason?.message || e.reason);
+      });
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

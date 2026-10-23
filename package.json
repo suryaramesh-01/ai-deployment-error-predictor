@@ -1,0 +1,22 @@
+{
+  "name": "ai-deployment-error-prediction-system",
+  "version": "1.0.0",
+  "description": "AI-Based Deployment Error Prediction System",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "cd backend && npm start",
+    "client": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build"
+  },
+  "keywords": [
+    "ai",
+    "devops",
+    "deployment",
+    "error-prediction",
+    "readiness-score",
+    "docker",
+    "aws"
+  ],
+  "author": "Antigravity Engineering",
+  "license": "MIT"
+}

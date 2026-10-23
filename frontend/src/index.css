@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #F5F3FF;
+    color: #302B43;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+
+  ::selection {
+    background-color: #8B78C6;
+    color: #FFFFFF;
+  }
+}
+
+/* Custom Scrollbars in Soft Lavender */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F3FF;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D9CFFF;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B5A5E5;
+}
+
+/* Light Lavender Crisp Card Styles */
+.crisp-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E7E2F0;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 20px -2px rgba(139, 120, 198, 0.08);
+  transition: all 0.2s ease-in-out;
+}
+
+.crisp-card:hover {
+  border-color: #8B78C6;
+  box-shadow: 0 8px 24px -4px rgba(139, 120, 198, 0.16);
+}
+
+/* Primary Lavender Action Button */
+.btn-primary {
+  background: #8B78C6;
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 0.75rem;
+  transition: all 0.15s ease-in-out;
+  box-shadow: 0 2px 10px 0 rgba(139, 120, 198, 0.35);
+}
+
+.btn-primary:hover {
+  background: #7865B3;
+  box-shadow: 0 4px 16px 0 rgba(139, 120, 198, 0.45);
+}
+
+/* Soft Highlight Pill Button / Badge */
+.btn-soft {
+  background: #E9E2FF;
+  color: #4D3E7B;
+  font-weight: 700;
+  border-radius: 0.75rem;
+  border: 1px solid #D9CFFF;
+  transition: all 0.15s ease-in-out;
+}
+
+.btn-soft:hover {
+  background: #D9CFFF;
+  color: #302B43;
+}
+
+/* Code Diff Blocks */
+.code-box-original {
+  background: #FDF2F4;
+  border-left: 3px solid #E11D48;
+}
+
+.code-box-fixed {
+  background: #F5F3FF;
+  border-left: 3px solid #8B78C6;
+}
